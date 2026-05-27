@@ -1,0 +1,175 @@
+================================================================
+  ÜBERGABE PROTOKOLL — MEMBERYARD PROJEKT
+  Erstellt: 27.05.2026
+================================================================
+
+----------------------------------------------------------------
+1. PERSON
+----------------------------------------------------------------
+Name          : Jannis Polysius
+Jahrgang      : 1996
+Beruf         : Berufssoldat, Bundeswehr — Offiziersausbildung
+Standort      : Kaufbeuren, Bayern
+Geräte        : Windows PC, iPad, iPhone
+Technisch     : Anfänger — lernt schnell mit klaren Anleitungen
+
+Ziele (kurz)  : Offizierlehrgänge abschließen
+Ziele (mittel): Zweites Standbein aufbauen (Memberyard)
+Ziele (lang)  : USA auswandern, Selbstständigkeit dort fortführen
+
+----------------------------------------------------------------
+2. PROJEKT: MEMBERYARD
+----------------------------------------------------------------
+Was ist es?   : Kostenlose Web-App als privates soziales Netzwerk
+                für deutsche Kleinvereine — WhatsApp-Ersatz
+Zielgruppe    : ~600.000 deutsche Kleinvereine (Sport, Kultur, Hobby)
+App-Name      : Memberyard (bewusst gewählt — international denkend)
+Domain        : memberyard.app (ist frei, noch nicht gekauft)
+
+----------------------------------------------------------------
+3. TECH STACK
+----------------------------------------------------------------
+Frontend      : React + Vite
+Datenbank/Auth: Supabase (Region: Frankfurt, EU)
+Hosting       : Vercel
+Kosten        : 0€ (aktuell, alle Free Tiers)
+
+----------------------------------------------------------------
+4. ACCOUNTS & ZUGÄNGE
+----------------------------------------------------------------
+Gmail         : memberyard.app@gmail.com
+GitHub        : github.com/memberyard  |  Repo: memberyard
+Supabase      : Projekt "memberyard" — Region Frankfurt
+Vercel        : verbunden mit GitHub-Account
+
+Supabase URL  : https://bifvawwsfjxiktnvicio.supabase.co
+⚠️  WICHTIG   : .env.local NIEMALS in GitHub pushen!
+                Diese Datei enthält geheime API Keys.
+
+----------------------------------------------------------------
+5. LOKALE PROJEKTSTRUKTUR
+----------------------------------------------------------------
+Pfad          : C:\Users\49152\Desktop\Memberyard\memberyard\
+
+memberyard/
+├── index.html
+├── package.json
+├── vite.config.js
+├── .env.local               ← Supabase Keys (GEHEIM, nicht pushen!)
+├── SETUP.md                 ← Einrichtungsanleitung
+├── UEBERGABE_PROTOKOLL.txt  ← diese Datei
+└── src/
+    ├── App.jsx              ← Routing & Auth-State
+    ├── main.jsx             ← React Einstiegspunkt
+    ├── index.css            ← Globale Styles
+    ├── lib/
+    │   └── supabase.js      ← Datenbankverbindung
+    └── pages/
+        ├── Home.jsx         ← Startseite
+        ├── Login.jsx        ← Login-Seite
+        ├── Register.jsx     ← Registrierung
+        └── Dashboard.jsx    ← Hauptbereich (nur nach Login)
+
+----------------------------------------------------------------
+6. ENTWICKLUNGSSTAND
+----------------------------------------------------------------
+
+✅ PHASE 1 — ABGESCHLOSSEN
+   - GitHub, Vercel, Supabase Accounts eingerichtet
+   - VS Code & Node.js installiert (v24.16.0)
+   - App-Name "Memberyard" festgelegt
+
+✅ PHASE 2 — FAST FERTIG (1 Schritt offen!)
+   - React Projektstruktur erstellt ✅
+   - Supabase verbunden ✅
+   - App läuft lokal auf http://localhost:5173 ✅
+   - Registrierung & Login funktioniert lokal ✅
+   - OFFEN: Deployment auf Vercel (Live-URL) ⬅️ NÄCHSTER SCHRITT
+
+⏳ PHASE 3 — NOCH NICHT GESTARTET
+   - Rollen-System: Admin / Mitglied / Gast
+   - Beitrittsanfrage-Funktion
+   - Admin-Dashboard
+
+⏳ PHASE 4 — NOCH NICHT GESTARTET
+   - Themen-Channels
+   - Vereinskalender
+   - Gäste-Bereich
+   - Push-Benachrichtigungen
+
+⏳ PHASE 5 — NOCH NICHT GESTARTET
+   - Testing mit echtem Verein
+
+----------------------------------------------------------------
+7. NÄCHSTER KONKRETER SCHRITT: VERCEL DEPLOYMENT
+----------------------------------------------------------------
+App lokal läuft → jetzt live ins Internet bringen.
+
+Schritt 1 — Git initialisieren & pushen (im Terminal im memberyard Ordner):
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/memberyard/memberyard.git
+   git push -u origin main
+
+Schritt 2 — Vercel Deployment:
+   vercel
+
+   Oder: vercel.com → Import → GitHub Repo auswählen
+
+Schritt 3 — Supabase Keys in Vercel eintragen:
+   Vercel Dashboard → Projekt → Settings → Environment Variables
+   VITE_SUPABASE_URL     = (aus .env.local)
+   VITE_SUPABASE_ANON_KEY = (aus .env.local)
+
+Ergebnis: App ist live unter memberyard.vercel.app (oder eigener Domain)
+
+----------------------------------------------------------------
+8. APP STARTEN (lokal)
+----------------------------------------------------------------
+   cd C:\Users\49152\Desktop\Memberyard\memberyard
+   npm run dev
+   → Öffne: http://localhost:5173
+
+----------------------------------------------------------------
+9. GEPLANTE AI AGENTS (noch nicht gebaut)
+----------------------------------------------------------------
+Agent 1 — E-Mail Manager
+   E-Mails selektieren, sortieren, zusammenfassen, löschen
+   Braucht: Gmail Connector
+
+Agent 2 — Morning Briefing
+   Täglich automatisch: Nachrichten + Termine + Wetter + Finanzen
+   Läuft auf Vercel, liefert jeden Morgen eine Zusammenfassung
+
+Agent 3 — Dokument Scanner
+   Gescannte Dokumente automatisch kategorisieren & steuerlich vorsortieren
+
+Agent 4 — Checklist Manager
+   Alle Checklisten zentral verwalten & Status ans Morning Briefing melden
+
+----------------------------------------------------------------
+10. MONETARISIERUNG (geplant, noch nicht aktiv)
+----------------------------------------------------------------
+   Freemium  : bis 20 Mitglieder kostenlos
+   Basic     : 9€/Monat bis 50 Mitglieder
+   Pro       : 19€/Monat unbegrenzt
+   Langfristig: US-Markt erschließen
+
+----------------------------------------------------------------
+11. ARBEITSREGELN / CLAUDE EINSTELLUNGEN
+----------------------------------------------------------------
+- Immer auf Deutsch antworten
+- Kurz & strukturiert: Ansprechen → Beurteilen → Folgern → Quellen
+- Erklärungen wie für Anfänger ohne Vorkenntnisse
+- Maximal 2–3 Schritte auf einmal ankündigen
+- Bei Fehlern: erst erklären was falsch ist, dann Lösung
+- Strategische Entscheidungen trifft Jannis selbst
+- Claude schlägt vor, Jannis entscheidet
+- Nach jeder Session current-focus.md aktualisieren
+
+----------------------------------------------------------------
+ERSTELLT MIT: Claude (Cowork Mode)
+ORDNER      : C:\Users\49152\Desktop\Memberyard\memberyard\
+================================================================
